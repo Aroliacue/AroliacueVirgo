@@ -309,3 +309,22 @@
       of a map.
   - maptweak: Added privacy features (boltable/tintable windows and doors) to most
       pre-existing pods.
+2025-10-28:
+  Diana:
+  - rscadd: 'Adds three new traits: Radiation Weakness (negative, 2 points), Radioactive
+      Glow (neutral) and Radioactive Heal (positive, 6 points).'
+  - bugfix: Promethean glowing works again!
+  - bugfix: mRegen mutation will now properly heal internal bleeding
+  - qol: Bruteloss also has a 1% chance per mutation tick of healing a minor amount,
+      just like fire damage does.
+  - code_imp: Adds a few new comsigs for radiation
+  - code_imp: Mutations and radiation are now properly separated.
+  - code_imp: Radiation now has framework to allow for contamination.
+  Will:
+  - code_imp: Adds a temporary shim component to aid in machine var removal on mobs
+  - code_imp: Implements COMSIG_LIVING_HANDLE_VISION
+  - rscadd: Implements COMSIG_LIVING_HANDLE_HUD
+  - refactor: cleaned up parent calls on handle_regular_hud_updates() and handle_vision()
+      to better support signals
+  - refactor: cleaned out many set_machine() calls for things with tguis that don't
+      alter your view
